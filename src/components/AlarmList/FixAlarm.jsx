@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import * as S from "./style";
 
-const AlarmList = (props) => {
+const FixAlarm = (props) => {
     const [isOn, setIsOn] = useState(false);
 
     const toggleHandler = () => {
@@ -15,15 +15,13 @@ const AlarmList = (props) => {
                     <p id="day">{props.day} AM</p>
                     <p id="time">{props.time} 8:00</p>
                 </S.textWrapper>
-                <S.toggleContainer onClick={toggleHandler}>
-                    <div className={`toggle-container ${isOn ? "toggle--checked" : ""}`}>
-                        <div className={`toggle-circle ${isOn ? "toggle--checked" : ""}`}></div>
-                    </div>
-                </S.toggleContainer>
+                <S.arrowIcon src="/src/assets/images/ArrowIcon.png"></S.arrowIcon>
             </S.textBox>
-            <S.Bar><hr/></S.Bar>
+            <S.fixIcon src="/src/assets/images/fixIcon.png" alt="수정 아이콘" /> {/* self-closing 태그로 수정 */}
+            <S.Bar><hr /></S.Bar>
         </S.alarmWrapper>
     );
 };
 
-export default AlarmList;
+export default FixAlarm;
+
