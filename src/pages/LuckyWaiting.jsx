@@ -1,22 +1,15 @@
-import styled from "styled-components";
+import { Layout } from "./style";
 import { Header, Title, Scratch, OffBtn } from "../components";
 import { useTime } from "../hooks/useTime";
-const Layout = styled.div`
-  width: 90%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-`;
 
 export const LuckyWaiting = () => {
   const { time, midDay } = useTime();
   return (
     <Layout>
       <Header midDay={midDay} time={time} />
-      <Title />
+      <Title>스크래치를 긁어서 오늘의 운세를 확인하세요</Title>
       <Scratch />
-      <OffBtn />
+      <OffBtn disabled={true} />
     </Layout>
   );
 };

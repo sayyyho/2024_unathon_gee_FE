@@ -3,7 +3,7 @@ import { createBrowserRouter } from "react-router-dom";
 import AlarmListPage from "./pages/alarmlist/AlarmListPage";
 import { LuckyEnd, LuckyWaiting } from "./pages";
 import Modal_fix from "./components/AlarmList/Modal_fix";
-
+import { LuckyWaiting, LuckyEnd, Main } from "./pages";
 
 export const router = createBrowserRouter([
   {
@@ -11,10 +11,13 @@ export const router = createBrowserRouter([
     element: <App />,
     children: [
       {
+        path: "",
+        element: <Main />,
+      },
+      {
         path: "/lucky/waiting",
         element: <LuckyWaiting />,
       },
-
       {
         path: "/lucky/end",
         element: <LuckyEnd />,
