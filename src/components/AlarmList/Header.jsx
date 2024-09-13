@@ -30,7 +30,7 @@ const Header = () => {
       <S.Container>
         {/* '편집'을 클릭하면 편집 모달을 열도록 설정 */}
         <p onClick={openEditModal}>편집</p>
-        <S.Image src="/src/assets/images/logo.png" alt="바보" id="icon" />
+        <S.Image src="/src/assets/images/logoHeader.png" alt="바보" id="icon" />
         {/* 'plus'를 클릭하면 추가 모달을 열도록 설정 */}
         <S.Image src="/src/assets/images/plus.png" alt="바보" id="plus" onClick={openAddModal} />
       </S.Container>
