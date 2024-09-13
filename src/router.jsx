@@ -1,11 +1,15 @@
 import App from "./App";
 import { createBrowserRouter } from "react-router-dom";
-import { LuckyWaiting, LuckyEnd } from "./pages";
+import { LuckyWaiting, LuckyEnd, Main } from "./pages";
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
     children: [
+      {
+        path: "",
+        element: <Main />,
+      },
       {
         path: "/lucky/waiting",
         element: <LuckyWaiting />,

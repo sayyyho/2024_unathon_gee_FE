@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
-export const useScratch = (threshold = 500) => {
+export const useScratch = (threshold = 400) => {
   const canvasRef = useRef(null);
   const [isDrawing, setIsDrawing] = useState(false);
   const [revealed, setRevealed] = useState(false);
@@ -49,7 +49,6 @@ export const useScratch = (threshold = 500) => {
     // 전체 캔버스 면적과 비교하여 비율 계산
     const totalArea = canvas.width * canvas.height;
     const percentScratched = (scratchedArea / totalArea) * 100;
-    console.log(percentScratched);
 
     if (percentScratched > threshold) {
       navigate("/lucky/end"); // 일정 비율 이상 긁히면 페이지 이동

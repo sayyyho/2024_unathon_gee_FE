@@ -7,9 +7,9 @@ export const LuckyWaiting = () => {
   return (
     <Layout>
       <Header midDay={midDay} time={time} />
-      <Title />
+      <Title>스크래치를 긁어서 오늘의 운세를 확인하세요</Title>
       <Scratch />
-      <OffBtn />
+      <OffBtn disabled={true} />
     </Layout>
   );
 };

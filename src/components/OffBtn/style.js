@@ -12,4 +12,8 @@ export const Button = styled.button`
   color: black;
   border: none;
   margin-top: 2rem;
+  cursor: pointer;
+  &:disabled {
+    cursor: none;
+  }
 `;
