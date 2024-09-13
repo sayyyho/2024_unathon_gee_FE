@@ -1,14 +1,20 @@
 import App from "./App";
 import { createBrowserRouter } from "react-router-dom";
+import { LuckyEnd, LuckyWaiting } from "./pages";
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
     children: [
-      //   {
-      //     path: "/login",
-      //     element: <Login />,
-      //   },
+      {
+        path: "/lucky/waiting",
+        element: <LuckyWaiting />,
+      },
+
+      {
+        path: "/lucky/end",
+        element: <LuckyEnd />,
+      },
     ],
     // errorElement: <NotFound />,
   },
