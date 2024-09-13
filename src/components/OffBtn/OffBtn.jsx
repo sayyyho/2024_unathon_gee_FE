@@ -1,5 +1,5 @@
 import { Button } from "./style";
 
-export const OffBtn = () => {
-  return <Button>알람 해제하기</Button>;
+export const OffBtn = ({ backgroundColor }) => {
+  return <Button $background={backgroundColor}>알람 해제하기</Button>;
 };
